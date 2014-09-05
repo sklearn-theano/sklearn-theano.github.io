@@ -1,0 +1,40 @@
+
+
+.. _example_plot_overfeat_layer1_filters.py:
+
+
+====================================
+Visualization of first layer filters
+====================================
+
+The first layers of convolutional neural networks often have very "human
+interpretable" values, as seen in these example plots. Visually, these filters
+are similar to other filters used in computer vision, such as Gabor filters.
+
+
+
+
+.. rst-class:: horizontal
+
+
+    *
+
+      .. image:: images/plot_overfeat_layer1_filters_001.png
+            :scale: 47
+
+    *
+
+      .. image:: images/plot_overfeat_layer1_filters_002.png
+            :scale: 47
+
+
+
+
+**Python source code:** :download:`plot_overfeat_layer1_filters.py <plot_overfeat_layer1_filters.py>`
+
+.. literalinclude:: plot_overfeat_layer1_filters.py
+    :lines: 11-
+
+**Total running time of the example:**  0.33 seconds
+( 0 minutes  0.33 seconds)
+    

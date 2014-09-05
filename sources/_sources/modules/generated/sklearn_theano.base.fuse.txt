@@ -1,0 +1,12 @@
+:mod:`sklearn_theano.base`.fuse
+============================================
+
+.. currentmodule:: sklearn_theano.base
+
+.. autofunction:: fuse
+
+.. include:: sklearn_theano.base.fuse.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

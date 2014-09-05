@@ -1,0 +1,16 @@
+:mod:`sklearn_theano.base`.Standardize
+=============================================
+
+.. currentmodule:: sklearn_theano.base
+
+.. autoclass:: Standardize
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: sklearn_theano.base.Standardize.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

@@ -1,0 +1,12 @@
+:mod:`sklearn_theano.datasets`.fetch_mnist_generated
+=================================================================
+
+.. currentmodule:: sklearn_theano.datasets
+
+.. autofunction:: fetch_mnist_generated
+
+.. include:: sklearn_theano.datasets.fetch_mnist_generated.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

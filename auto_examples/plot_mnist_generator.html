@@ -11,12 +11,12 @@
     <title>Generative networks for random MNIST digits &mdash; sklearn-theano 0.0.1 documentation</title>
   <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../_static/css/bootstrap.min.css" media="screen" />
-  <link rel="stylesheet" href="../_static/css/bootstrap-responsive.css"/>
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-responsive.css"/>
 
     
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -27,12 +27,12 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/js/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/js/examples.js"></script>
-    <link rel="shortcut icon" href="../_static/mini_sloth_bw.ico"/>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/underscore.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <script type="text/javascript" src="../static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../static/js/examples.js"></script>
+    <link rel="shortcut icon" href="../static/mini_sloth_bw.ico"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../index.html" />
     <link rel="up" title="Examples" href="index.html" />
@@ -40,11 +40,11 @@
     <link rel="prev" title="Examples" href="index.html" />
   
    
-       <script type="text/javascript" src="../_static/sidebar.js"></script>
+       <script type="text/javascript" src="../static/sidebar.js"></script>
    
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="../_static/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../static/js/bootstrap.min.js" type="text/javascript"></script>
   <link rel="canonical" href="http://sklearn-theano.github.io/dev/auto_examples/plot_mnist_generator.html" />
 
   <script type="text/javascript">
@@ -67,12 +67,12 @@
 <div class="header-wrapper">
     <div class="header">
         <p class="logo"><a href="../index.html">
-            <img src="../_static/mini_sloth_bw.png" alt="Logo"/>
+            <img src="../static/mini_sloth_bw.png" alt="Logo"/>
         </a>
         </p><div class="navbar">
             <ul>
-                <li><a href="../../dev/index.html">Home</a></li>
-                <li><a href="../../dev/install.html">Installation</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../install.html">Installation</a></li>
                 <li class="btn-li"><div class="btn-group">
 		      <a href="../documentation.html">Documentation</a>
 		      <a class="btn dropdown-toggle" data-toggle="dropdown">
@@ -102,7 +102,7 @@
 <a href="https://github.com/sklearn-theano/sklearn-theano">
   <img class="fork-me"
        style="position: absolute; top: 0; right: 0; border: 0;"
-       src="../_static/img/forkme.png"
+       src="../static/img/forkme.png"
        alt="Fork me on GitHub" />
 </a>
 
@@ -188,7 +188,7 @@ sklearn-theano, and can easily be used to fetch an arbitrary number of plausible
 MNIST digits.</p>
 <p>Additionally, this example also shows how to make an automatically updating plot
 with the &#8216;TkAgg&#8217; backend to matplotlib.</p>
-<img alt="../_images/plot_mnist_generator_001.png" class="align-center" src="../_images/plot_mnist_generator_001.png" />
+<img alt="../images/plot_mnist_generator_001.png" class="align-center" src="../images/plot_mnist_generator_001.png" />
 <p><strong>Script output</strong>:</p>
 <div class="highlight-python"><div class="highlight"><pre>Iteration 0
 Iteration 20
@@ -197,7 +197,7 @@ Iteration 60
 Iteration 80
 </pre></div>
 </div>
-<p><strong>Python source code:</strong> <a class="reference download internal" href="../_downloads/plot_mnist_generator.py"><tt class="xref download docutils literal"><span class="pre">plot_mnist_generator.py</span></tt></a></p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_mnist_generator.py"><tt class="xref download docutils literal"><span class="pre">plot_mnist_generator.py</span></tt></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;TkAgg&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -228,8 +228,8 @@ Iteration 80
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  17.66 seconds
-( 0 minutes  17.66 seconds)</p>
+<p><strong>Total running time of the example:</strong>  17.80 seconds
+( 0 minutes  17.80 seconds)</p>
 </div>
 
 
@@ -242,7 +242,7 @@ Iteration 80
 
     <div class="footer">
         &copy; 2014 - 2016, sklearn-theano developers (BSD License).
-      <a href="../_sources/auto_examples/plot_mnist_generator.txt" rel="nofollow">Show this page source</a>
+      <a href="../sources/auto_examples/plot_mnist_generator.txt" rel="nofollow">Show this page source</a>
     </div>
      <div class="rel">
     

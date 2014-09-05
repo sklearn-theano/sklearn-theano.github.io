@@ -1,0 +1,12 @@
+:mod:`sklearn_theano.datasets`.fetch_asirra
+========================================================
+
+.. currentmodule:: sklearn_theano.datasets
+
+.. autofunction:: fetch_asirra
+
+.. include:: sklearn_theano.datasets.fetch_asirra.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

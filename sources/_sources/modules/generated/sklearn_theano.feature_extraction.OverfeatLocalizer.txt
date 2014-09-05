@@ -1,0 +1,16 @@
+:mod:`sklearn_theano.feature_extraction`.OverfeatLocalizer
+=================================================================
+
+.. currentmodule:: sklearn_theano.feature_extraction
+
+.. autoclass:: OverfeatLocalizer
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: sklearn_theano.feature_extraction.OverfeatLocalizer.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>
