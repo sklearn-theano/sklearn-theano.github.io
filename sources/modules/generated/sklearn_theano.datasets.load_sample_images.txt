@@ -1,11 +1,11 @@
-:mod:`sklearn_theano.datasets`.load_sampleimages
+:mod:`sklearn_theano.datasets`.load_sample_images
 ==============================================================
 
 .. currentmodule:: sklearn_theano.datasets
 
-.. autofunction:: load_sampleimages
+.. autofunction:: load_sample_images
 
-.. include:: sklearn_theano.datasets.load_sampleimages.examples
+.. include:: sklearn_theano.datasets.load_sample_images.examples
 
 .. raw:: html
 

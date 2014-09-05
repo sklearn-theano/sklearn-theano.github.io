@@ -32,7 +32,7 @@ sloth_label = [label for label in get_all_overfeat_labels()
                if 'three-toed sloth' in label][0]
 clf = OverfeatLocalizer(match_strings=[sloth_label])
 
-sloth_points = clf.predict(X.astype('float32'))[0]
+sloth_points = clf.predict(X)[0]
 sloth_box = convert_points_to_box(sloth_points, 'orange', .4)
 
 plt.imshow(X)

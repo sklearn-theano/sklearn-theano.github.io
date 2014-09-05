@@ -40,6 +40,6 @@ with the 'TkAgg' backend to matplotlib.
 .. literalinclude:: plot_mnist_generator.py
     :lines: 18-
 
-**Total running time of the example:**  17.83 seconds
-( 0 minutes  17.83 seconds)
+**Total running time of the example:**  17.79 seconds
+( 0 minutes  17.79 seconds)
     

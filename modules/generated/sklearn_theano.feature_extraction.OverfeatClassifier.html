@@ -185,10 +185,10 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><tt class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></tt></a>.OverfeatClassifier<a class="headerlink" href="#sklearn-theano-feature-extraction-overfeatclassifier" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier">
-<em class="property">class </em><tt class="descclassname">sklearn_theano.feature_extraction.</tt><tt class="descname">OverfeatClassifier</tt><big>(</big><em>top_n=5</em>, <em>large_network=False</em>, <em>output_strings=True</em>, <em>transpose_order=(0</em>, <em>3</em>, <em>1</em>, <em>2)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L244"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sklearn_theano.feature_extraction.</tt><tt class="descname">OverfeatClassifier</tt><big>(</big><em>top_n=5</em>, <em>large_network=False</em>, <em>output_strings=True</em>, <em>transpose_order=(0</em>, <em>3</em>, <em>1</em>, <em>2)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L246"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>A classifier for cropped images using the OverFeat neural network.</p>
 <p>If large_network=True, this X will be cropped to the center
-227x227 pixels. Otherwise, this cropped box will be 231x231.</p>
+221x221 pixels. Otherwise, this cropped box will be 231x231.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -196,7 +196,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>large_network</strong> : boolean, optional (default=False)</p>
 <blockquote>
 <div><p>Which network to use. If large_network = True, input will be cropped
-to the center 227 x 227 pixels. Otherwise, input will be cropped to the
+to the center 221 x 221 pixels. Otherwise, input will be cropped to the
 center 231 x 231 pixels.</p>
 </div></blockquote>
 <p><strong>top_n</strong> : integer, optional (default=5)</p>
@@ -244,18 +244,18 @@ strings by default.</p>
 </table>
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>top_n=5</em>, <em>large_network=False</em>, <em>output_strings=True</em>, <em>transpose_order=(0</em>, <em>3</em>, <em>1</em>, <em>2)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L271"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.__init__" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">__init__</tt><big>(</big><em>top_n=5</em>, <em>large_network=False</em>, <em>output_strings=True</em>, <em>transpose_order=(0</em>, <em>3</em>, <em>1</em>, <em>2)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L273"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier.fit">
-<tt class="descname">fit</tt><big>(</big><em>X</em>, <em>y=None</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L284"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">fit</tt><big>(</big><em>X</em>, <em>y=None</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L286"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Passthrough for scikit-learn pipeline compatibility.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier.get_params">
-<tt class="descname">get_params</tt><big>(</big><em>deep=True</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.get_params" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_params</tt><big>(</big><em>deep=True</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -280,23 +280,23 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier.predict">
-<tt class="descname">predict</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L322"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">predict</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L314"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classify a set of cropped input images.</p>
 <p>Returns the top_n classes.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [nimages, height, width, color]</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_images, height, width, color]</p>
 <blockquote>
 <div><p>or
 shape = [height, width, color]</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>T</strong> : array-like, shape = [nimages, top_n]</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>T</strong> : array-like, shape = [n_images, top_n]</p>
 <blockquote class="last">
-<div><p>Returns the top_n classes for each of the nimages in X.
+<div><p>Returns the top_n classes for each of the n_images in X.
 If output_strings is True, then the result will be string
 description of the class label.</p>
 <p>Otherwise, the returned values will be the integer class label.</p>
@@ -309,23 +309,23 @@ description of the class label.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier.predict_proba">
-<tt class="descname">predict_proba</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L357"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">predict_proba</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L349"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prediction probability for a set of cropped input images.</p>
 <p>Returns the top_n probabilities.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [nimages, height, width, color]</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_images, height, width, color]</p>
 <blockquote>
 <div><p>or
 shape = [height, width, color]</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>T</strong> : array-like, shape = [nimages, top_n]</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>T</strong> : array-like, shape = [n_images, top_n]</p>
 <blockquote class="last">
-<div><p>Returns the top_n probabilities for each of the nimages in X.</p>
+<div><p>Returns the top_n probabilities for each of the n_images in X.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -335,7 +335,7 @@ shape = [height, width, color]</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatClassifier.set_params">
-<tt class="descname">set_params</tt><big>(</big><em>**params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.set_params" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">set_params</tt><big>(</big><em>**params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatClassifier.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form

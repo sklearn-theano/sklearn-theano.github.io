@@ -24,7 +24,7 @@ sklearn-theano. Plots show one example of each class (cats and dogs).
 
   Total transform time
   ====================
-  104.37974667549133
+  103.57567715644836
   
                precision    recall  f1-score   support
   
@@ -45,6 +45,6 @@ sklearn-theano. Plots show one example of each class (cats and dogs).
 .. literalinclude:: plot_asirra_dataset.py
     :lines: 13-
 
-**Total running time of the example:**  176.44 seconds
-( 2 minutes  56.44 seconds)
+**Total running time of the example:**  175.25 seconds
+( 2 minutes  55.25 seconds)
     

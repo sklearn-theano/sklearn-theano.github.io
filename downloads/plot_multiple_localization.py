@@ -19,7 +19,7 @@ bounding boxes if the subjects both fall under the same WordNet group, but are
 not the same class. Imagine an image of two different species cats -
 in this case the exact class labels may be better at creating bounding boxes.
 
-It is also beneficial to use the scikit-learn's Gaussian Mixture Models to
+It is also beneficial to use scikit-learn's Gaussian Mixture Models to
 better estimate bounding boxes without the influence of outliers. In this case,
 one Gaussian will be placed to try and describe all of the matched points. Using
 a width and height bound of 3 standard deviations, it is possible to draw
@@ -50,7 +50,7 @@ dog_label = 'dog.n.01'
 cat_label = 'cat.n.01'
 clf = OverfeatLocalizer(top_n=1,
                         match_strings=[dog_label, cat_label])
-points = clf.predict(X.astype('float32'))
+points = clf.predict(X)
 dog_points = points[0]
 cat_points = points[1]
 

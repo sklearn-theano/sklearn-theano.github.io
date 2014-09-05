@@ -77,7 +77,7 @@ axarr[0, 1].add_patch(r)
 axarr[0, 2].imshow(X)
 axarr[0, 2].axis('off')
 clf = OverfeatTransformer(force_reshape=False)
-X_tf = clf.transform(X[None].astype('float32'))
+X_tf = clf.transform(X)
 x_points = np.linspace(0, X.shape[1] - 231, X_tf[0].shape[3])
 y_points = np.linspace(0, X.shape[0] - 231, X_tf[0].shape[2])
 xx, yy = np.meshgrid(x_points, y_points)
@@ -88,7 +88,7 @@ for x, y in zip(xx.flat, yy.flat):
 # Get all points with sloth in the top 5 labels
 sloth_label = "three-toed sloth, ai, Bradypus tridactylus"
 clf = OverfeatLocalizer(match_strings=[sloth_label])
-sloth_points = clf.predict(X.astype('float32'))[0]
+sloth_points = clf.predict(X)[0]
 axarr[1, 0].imshow(X)
 axarr[1, 0].axis('off')
 axarr[1, 0].autoscale(enable=False)

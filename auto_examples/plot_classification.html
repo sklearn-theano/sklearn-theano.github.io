@@ -198,10 +198,10 @@ classes for the OverfeatClassifier.</p>
 <span class="n">X</span> <span class="o">=</span> <span class="n">load_sample_image</span><span class="p">(</span><span class="s">&quot;sloth_closeup.jpg&quot;</span><span class="p">)</span>
 <span class="n">top_n_classes</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">OverfeatClassifier</span><span class="p">(</span><span class="n">top_n</span><span class="o">=</span><span class="n">top_n_classes</span><span class="p">)</span>
-<span class="n">prediction</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float32&#39;</span><span class="p">))</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="c"># Shortened the labels for plotting</span>
 <span class="n">prediction</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prediction</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
-<span class="n">prediction_probs</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float32&#39;</span><span class="p">))</span>
+<span class="n">prediction_probs</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">crop_width</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">crop_height</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">crop_box</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span>
@@ -222,8 +222,8 @@ classes for the OverfeatClassifier.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  20.42 seconds
-( 0 minutes  20.42 seconds)</p>
+<p><strong>Total running time of the example:</strong>  20.29 seconds
+( 0 minutes  20.29 seconds)</p>
 </div>
 
 

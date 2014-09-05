@@ -22,10 +22,10 @@ from sklearn_theano.feature_extraction import OverfeatClassifier
 X = load_sample_image("sloth_closeup.jpg")
 top_n_classes = 5
 clf = OverfeatClassifier(top_n=top_n_classes)
-prediction = clf.predict(X.astype('float32'))
+prediction = clf.predict(X)
 # Shortened the labels for plotting
 prediction = [p.split(",")[0] for p in prediction.ravel()]
-prediction_probs = clf.predict_proba(X.astype('float32'))
+prediction_probs = clf.predict_proba(X)
 crop_width = clf.crop_bounds_[1] - clf.crop_bounds_[0]
 crop_height = clf.crop_bounds_[3] - clf.crop_bounds_[2]
 crop_box = Rectangle((clf.crop_bounds_[0], clf.crop_bounds_[2]), crop_width, crop_height,

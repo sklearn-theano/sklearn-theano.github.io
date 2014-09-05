@@ -193,7 +193,7 @@ to search for a variety of subjects, but may lead to confusion when drawing
 bounding boxes if the subjects both fall under the same WordNet group, but are
 not the same class. Imagine an image of two different species cats -
 in this case the exact class labels may be better at creating bounding boxes.</p>
-<p>It is also beneficial to use the scikit-learn&#8217;s Gaussian Mixture Models to
+<p>It is also beneficial to use scikit-learn&#8217;s Gaussian Mixture Models to
 better estimate bounding boxes without the influence of outliers. In this case,
 one Gaussian will be placed to try and describe all of the matched points. Using
 a width and height bound of 3 standard deviations, it is possible to draw
@@ -224,7 +224,7 @@ method used in <tt class="docutils literal"><span class="pre">plot_single_locali
 <span class="n">cat_label</span> <span class="o">=</span> <span class="s">&#39;cat.n.01&#39;</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">OverfeatLocalizer</span><span class="p">(</span><span class="n">top_n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
                         <span class="n">match_strings</span><span class="o">=</span><span class="p">[</span><span class="n">dog_label</span><span class="p">,</span> <span class="n">cat_label</span><span class="p">])</span>
-<span class="n">points</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float32&#39;</span><span class="p">))</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">dog_points</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">cat_points</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
@@ -243,8 +243,8 @@ method used in <tt class="docutils literal"><span class="pre">plot_single_locali
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  158.60 seconds
-( 2 minutes  38.60 seconds)</p>
+<p><strong>Total running time of the example:</strong>  159.09 seconds
+( 2 minutes  39.09 seconds)</p>
 </div>
 
 

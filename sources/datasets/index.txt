@@ -9,21 +9,21 @@ This package also features helpers to fetch larger datasets and parameters
 commonly used by the machine learning community to benchmark algorithm on data
 that comes from the 'real world'.
 
-.. _sampleimages:
+.. _sample_images:
 
 Sample images
 =============
 
-The scikit also embed a couple of sample JPEG images published under Creative
-Commons license by their authors. Those image can be useful to test algorithms
-and pipeline on 2D data.
+sklearn-theano embeds sample JPEG images published under Creative
+Commons license by their authors. These images can be useful to test
+algorithms and pipelines for images and other multidimensional data.
 
 .. autosummary::
 
    :toctree: ../modules/generated/
    :template: function.rst
 
-   load_sampleimages
+   load_sample_images
    load_sample_image
 
 .. image:: ../auto_examples/images/plot_single_localization_001.png

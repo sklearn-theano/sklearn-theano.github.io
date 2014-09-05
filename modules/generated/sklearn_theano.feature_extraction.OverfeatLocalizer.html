@@ -185,10 +185,10 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><tt class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></tt></a>.OverfeatLocalizer<a class="headerlink" href="#sklearn-theano-feature-extraction-overfeatlocalizer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer">
-<em class="property">class </em><tt class="descclassname">sklearn_theano.feature_extraction.</tt><tt class="descname">OverfeatLocalizer</tt><big>(</big><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L379"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sklearn_theano.feature_extraction.</tt><tt class="descname">OverfeatLocalizer</tt><big>(</big><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L372"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>A localizer for single images using the OverFeat neural network.</p>
 <p>If large_network=True, this X will be cropped to the center
-227x227 pixels. Otherwise, this box will be 231x231.</p>
+221x221 pixels. Otherwise, this box will be 231x231.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -203,7 +203,7 @@ WordNet leaf, otherwise the string is assumed to be a class label.</p>
 <p><strong>large_network</strong> : boolean, optional (default=False)</p>
 <blockquote>
 <div><p>Which network to use. If True, the transform will operate over X in
-windows of 227x227 pixels. Otherwise, these windows will be 231x231.</p>
+windows of 221x221 pixels. Otherwise, these windows will be 231x231.</p>
 </div></blockquote>
 <p><strong>top_n</strong> : integer, optional (default=5)</p>
 <blockquote>
@@ -241,18 +241,18 @@ strings by default.</p>
 </table>
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L405"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.__init__" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">__init__</tt><big>(</big><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L398"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.fit">
-<tt class="descname">fit</tt><big>(</big><em>X</em>, <em>y=None</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L417"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.fit" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">fit</tt><big>(</big><em>X</em>, <em>y=None</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L410"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Passthrough for scikit-learn pipeline compatibility.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.get_params">
-<tt class="descname">get_params</tt><big>(</big><em>deep=True</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.get_params" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_params</tt><big>(</big><em>deep=True</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -277,7 +277,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.predict">
-<tt class="descname">predict</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/feature_extraction/overfeat.py#L421"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.predict" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">predict</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L414"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Localize an input image.</p>
 <p>Returns the points where the top_n classes contains any of the
 match_strings.</p>
@@ -305,7 +305,7 @@ plt.scatter(T[i][:, 0], T[i][:, 1])</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.set_params">
-<tt class="descname">set_params</tt><big>(</big><em>**params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/4324d81/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.set_params" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">set_params</tt><big>(</big><em>**params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form

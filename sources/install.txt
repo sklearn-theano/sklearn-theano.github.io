@@ -17,8 +17,8 @@ Installing
 Sklearn-theano requires:
 
 - Python (>= 2.6 or >= 3.3),
-- NumPy
-- SciPy
+- Numpy
+- Scipy
 - Theano (>= 0.6)
 - scikit-learn
 - pillow

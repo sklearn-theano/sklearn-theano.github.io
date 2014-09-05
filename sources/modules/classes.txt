@@ -63,7 +63,7 @@ Loaders
    :template: function.rst
 
    datasets.fetch_asirra
-   datasets.load_sampleimages
+   datasets.load_sample_images
    datasets.load_sample_image
 
 Samples generator

@@ -208,7 +208,7 @@ and maximum values for X and Y of the matching points.</p>
                <span class="k">if</span> <span class="s">&#39;three-toed sloth&#39;</span> <span class="ow">in</span> <span class="n">label</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">OverfeatLocalizer</span><span class="p">(</span><span class="n">match_strings</span><span class="o">=</span><span class="p">[</span><span class="n">sloth_label</span><span class="p">])</span>
 
-<span class="n">sloth_points</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float32&#39;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">sloth_points</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">sloth_box</span> <span class="o">=</span> <span class="n">convert_points_to_box</span><span class="p">(</span><span class="n">sloth_points</span><span class="p">,</span> <span class="s">&#39;orange&#39;</span><span class="p">,</span> <span class="o">.</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -220,8 +220,8 @@ and maximum values for X and Y of the matching points.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  158.77 seconds
-( 2 minutes  38.77 seconds)</p>
+<p><strong>Total running time of the example:</strong>  158.31 seconds
+( 2 minutes  38.31 seconds)</p>
 </div>
 
 

@@ -253,7 +253,7 @@ GMM class can be found in <tt class="docutils literal"><span class="pre">plot_mu
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;off&#39;</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">OverfeatTransformer</span><span class="p">(</span><span class="n">force_reshape</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">X_tf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="bp">None</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float32&#39;</span><span class="p">))</span>
+<span class="n">X_tf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">231</span><span class="p">,</span> <span class="n">X_tf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 <span class="n">y_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">231</span><span class="p">,</span> <span class="n">X_tf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_points</span><span class="p">,</span> <span class="n">y_points</span><span class="p">)</span>
@@ -264,7 +264,7 @@ GMM class can be found in <tt class="docutils literal"><span class="pre">plot_mu
 <span class="c"># Get all points with sloth in the top 5 labels</span>
 <span class="n">sloth_label</span> <span class="o">=</span> <span class="s">&quot;three-toed sloth, ai, Bradypus tridactylus&quot;</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">OverfeatLocalizer</span><span class="p">(</span><span class="n">match_strings</span><span class="o">=</span><span class="p">[</span><span class="n">sloth_label</span><span class="p">])</span>
-<span class="n">sloth_points</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float32&#39;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">sloth_points</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;off&#39;</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
@@ -284,8 +284,8 @@ GMM class can be found in <tt class="docutils literal"><span class="pre">plot_mu
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  317.88 seconds
-( 5 minutes  17.88 seconds)</p>
+<p><strong>Total running time of the example:</strong>  324.86 seconds
+( 5 minutes  24.86 seconds)</p>
 </div>
 </div>
 

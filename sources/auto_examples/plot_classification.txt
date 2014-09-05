@@ -29,6 +29,6 @@ classes for the OverfeatClassifier.
 .. literalinclude:: plot_classification.py
     :lines: 15-
 
-**Total running time of the example:**  20.42 seconds
-( 0 minutes  20.42 seconds)
+**Total running time of the example:**  20.29 seconds
+( 0 minutes  20.29 seconds)
     

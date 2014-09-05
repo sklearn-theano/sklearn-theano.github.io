@@ -29,6 +29,6 @@ For more detail about how this works in detail, see the
 .. literalinclude:: plot_single_localization.py
     :lines: 15-
 
-**Total running time of the example:**  158.77 seconds
-( 2 minutes  38.77 seconds)
+**Total running time of the example:**  158.31 seconds
+( 2 minutes  38.31 seconds)
     

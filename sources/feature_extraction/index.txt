@@ -9,7 +9,7 @@ This package also features helpers to fetch larger datasets and parameters
 commonly used by the machine learning community to benchmark algorithm on data
 that comes from the 'real world'.
 
-.. _sampleimages:
+.. _sample_images:
 
 Overfeat
 ========
