@@ -1,0 +1,383 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+    <title>Generative networks for random CIFAR images &mdash; sklearn-theano 0.0.1 documentation</title>
+  <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-responsive.css"/>
+
+    
+    <link rel="stylesheet" href="../static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/underscore.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <script type="text/javascript" src="../static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../static/js/examples.js"></script>
+    <link rel="shortcut icon" href="../static/mini_sloth_bw.ico"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../index.html" />
+    <link rel="up" title="Examples" href="index.html" />
+    <link rel="next" title="Generative networks for random MNIST digits" href="plot_mnist_generator.html" />
+    <link rel="prev" title="Examples" href="index.html" />
+  
+   
+       <script type="text/javascript" src="../static/sidebar.js"></script>
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="../static/js/bootstrap.min.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://sklearn-theano.github.io/dev/auto_examples/plot_cifar_fully_connected_generator.html" />
+
+  <script type="text/javascript">
+    $("div.buttonNext, div.buttonPrevious").hover(
+       function () {
+           $(this).css('background-color', '#FF9C34');
+       },
+       function () {
+           $(this).css('background-color', '#A7D6E2');
+       }
+    );
+    var bodywrapper = $('.bodywrapper');
+    var sidebarbutton = $('#sidebarbutton');
+    sidebarbutton.css({'height': '900px'});
+  </script>
+
+  </head>
+  <body role="document">
+
+<div class="header-wrapper">
+    <div class="header">
+        <p class="logo"><a href="../index.html">
+            <img src="../static/mini_sloth_bw.png" alt="Logo"/>
+        </a>
+        </p><div class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../install.html">Installation</a></li>
+                <li class="btn-li"><div class="btn-group">
+		      <a href="../documentation.html">Documentation</a>
+		      <a class="btn dropdown-toggle" data-toggle="dropdown">
+			     <span class="caret"></span>
+		      </a>
+		      <ul class="dropdown-menu">
+			<li class="link-title">sklearn-theano 0.1 (development)</li>
+			<li><a href="../user_guide.html">User guide</a></li>
+			<li><a href="../modules/classes.html">API</a></li>
+			<li class="divider"></li>
+		        <li><a href="http://sklearn-theano.github.io/dev/documentation.html">Development</a></li>
+		        <li><a href="../documentation.html">More versions...</a></li>
+		      </ul>
+		    </div>
+		</li>
+            <li><a href="index.html">Examples</a></li>
+            </ul>
+
+            <div class="search_form">
+                <div id="cse" style="width: 100%;"></div>
+            </div>
+        </div> <!-- end navbar --></div>
+</div>
+
+
+<!-- Github "fork me" ribbon -->
+<a href="https://github.com/sklearn-theano/sklearn-theano">
+  <img class="fork-me"
+       style="position: absolute; top: 0; right: 0; border: 0;"
+       src="../static/img/forkme.png"
+       alt="Fork me on GitHub" />
+</a>
+
+<div class="content-wrapper">
+    <div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+        <div class="rel">
+    
+
+  <!-- rellinks[1:] is an ugly hack to avoid link to module
+  index -->
+        <div class="rellink">
+        <a href="index.html"
+        accesskey="P">Previous
+        <br/>
+        <span class="smallrellink">
+        Examples
+        </span>
+            <span class="hiddenrellink">
+            Examples
+            </span>
+        </a>
+        </div>
+            <div class="spacer">
+            &nbsp;
+            </div>
+        <div class="rellink">
+        <a href="plot_mnist_generator.html"
+        accesskey="N">Next
+        <br/>
+        <span class="smallrellink">
+        Generative netwo...
+        </span>
+            <span class="hiddenrellink">
+            Generative networks for random MNIST digits
+            </span>
+        </a>
+        </div>
+
+    <!-- Ad a link to the 'up' page -->
+        <div class="spacer">
+        &nbsp;
+        </div>
+        <div class="rellink">
+        <a href="index.html">
+        Up
+        <br/>
+        <span class="smallrellink">
+        Examples
+        </span>
+            <span class="hiddenrellink">
+            Examples
+            </span>
+            
+        </a>
+        </div>
+    </div>
+    
+      <p class="doc-version">This documentation is for sklearn-theano <strong>version 0.0.1</strong> &mdash; <a href="http://sklearn-theano.github.io/dev/support.html#documentation-resources">Other versions</a></p>
+    <p class="citing">If you are reading this, thanks for using <a href="../about.html#sklearn-theano">sklearn-theano</a>.</p>
+    <ul>
+<li><a class="reference internal" href="#">Generative networks for random CIFAR images</a></li>
+</ul>
+
+    </div>
+</div>
+
+
+
+      <div class="content">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="generative-networks-for-random-cifar-images">
+<span id="example-plot-cifar-fully-connected-generator-py"></span><h1>Generative networks for random CIFAR images<a class="headerlink" href="#generative-networks-for-random-cifar-images" title="Permalink to this headline">¶</a></h1>
+<p>This demo of a CIFAR generator is based on the work of
+I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair,
+A. Courville, Y.Bengio. <em>Generative Adversarial Networks</em>, June 2014.</p>
+<p>The generators trained as part of the published experiment have been wrapped in
+sklearn-theano, and can easily be used to fetch an arbitrary number of plausible
+CIFAR images.</p>
+<p>Additionally, this example also shows how to make an automatically updating plot
+with the &#8216;TkAgg&#8217; backend to matplotlib.</p>
+<img alt="../images/plot_cifar_fully_connected_generator_001.png" class="align-center" src="../images/plot_cifar_fully_connected_generator_001.png" />
+<p><strong>Script output</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Iteration 10
+Iteration 11
+Iteration 12
+Iteration 13
+Iteration 14
+Iteration 15
+Iteration 16
+Iteration 17
+Iteration 18
+Iteration 19
+Iteration 20
+Iteration 21
+Iteration 22
+Iteration 23
+Iteration 24
+Iteration 25
+Iteration 26
+Iteration 27
+Iteration 28
+Iteration 29
+Iteration 30
+Iteration 31
+Iteration 32
+Iteration 33
+Iteration 34
+Iteration 35
+Iteration 36
+Iteration 37
+Iteration 38
+Iteration 39
+Iteration 40
+Iteration 41
+Iteration 42
+Iteration 43
+Iteration 44
+Iteration 45
+Iteration 46
+Iteration 47
+Iteration 48
+Iteration 49
+Iteration 50
+Iteration 51
+Iteration 52
+Iteration 53
+Iteration 54
+Iteration 55
+Iteration 56
+Iteration 57
+Iteration 58
+Iteration 59
+Iteration 60
+Iteration 61
+Iteration 62
+Iteration 63
+Iteration 64
+Iteration 65
+Iteration 66
+Iteration 67
+Iteration 68
+Iteration 69
+Iteration 70
+Iteration 71
+Iteration 72
+Iteration 73
+Iteration 74
+Iteration 75
+Iteration 76
+Iteration 77
+Iteration 78
+Iteration 79
+Iteration 80
+Iteration 81
+Iteration 82
+Iteration 83
+Iteration 84
+Iteration 85
+Iteration 86
+Iteration 87
+Iteration 88
+Iteration 89
+Iteration 90
+Iteration 91
+Iteration 92
+Iteration 93
+Iteration 94
+Iteration 95
+Iteration 96
+Iteration 97
+Iteration 98
+Iteration 99
+</pre></div>
+</div>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_cifar_fully_connected_generator.py"><code class="xref download docutils literal"><span class="pre">plot_cifar_fully_connected_generator.py</span></code></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;TkAgg&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">sklearn_theano.datasets</span> <span class="kn">import</span> <span class="n">fetch_cifar_fully_connected_generated</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">fetch_cifar_fully_connected_generated</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1999</span><span class="p">)</span>
+
+
+<span class="c"># plotting based on</span>
+<span class="c"># http://stackoverflow.com/questions/4098131/matplotlib-update-a-plot</span>
+<span class="n">num_updates</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">//</span> <span class="mi">16</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">axarr</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">objarr</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.empty_like.html#numpy.empty_like"><span class="n">np</span><span class="o">.</span><span class="n">empty_like</span></a><span class="p">(</span><span class="n">axarr</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axarr</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
+    <span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_updates</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span><span class="p">])</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.draw"><span class="n">plt</span><span class="o">.</span><span class="n">draw</span></a><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">08</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Iteration </span><span class="si">%i</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the example:</strong>  28.61 seconds
+( 0 minutes  28.61 seconds)</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2014 - 2016, sklearn-theano developers (BSD License).
+      <a href="../sources/auto_examples/plot_cifar_fully_connected_generator.txt" rel="nofollow">Show this page source</a>
+    </div>
+     <div class="rel">
+    
+    <div class="buttonPrevious">
+      <a href="index.html">Previous
+      </a>
+    </div>
+    <div class="buttonNext">
+      <a href="plot_mnist_generator.html">Next
+      </a>
+    </div>
+    
+     </div>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      # Set google analytics
+# FIXME
+      _gaq.push(['_setAccount', '222']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript"> google.load('search', '1',
+        {language : 'en'}); google.setOnLoadCallback(function() {
+            var customSearchControl = new
+            #FIXME
+            google.search.CustomSearchControl('016639176250731907682:tjtqbvtvij0');
+            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            var options = new google.search.DrawOptions();
+            options.setAutoComplete(true);
+            customSearchControl.draw('cse', options); }, true);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+    <title>sklearn_theano.feature_extraction.GoogLeNetClassifier &mdash; sklearn-theano 0.0.1 documentation</title>
+  <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../static/css/bootstrap.min.css" media="screen" />
+  <link rel="stylesheet" href="../../static/css/bootstrap-responsive.css"/>
+
+    
+    <link rel="stylesheet" href="../../static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../static/jquery.js"></script>
+    <script type="text/javascript" src="../../static/underscore.js"></script>
+    <script type="text/javascript" src="../../static/doctools.js"></script>
+    <script type="text/javascript" src="../../static/js/copybutton.js"></script>
+    <script type="text/javascript" src="../../static/js/examples.js"></script>
+    <link rel="shortcut icon" href="../../static/mini_sloth_bw.ico"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../../index.html" />
+  
+   
+       <script type="text/javascript" src="../../static/sidebar.js"></script>
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="../../static/js/bootstrap.min.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://sklearn-theano.github.io/dev/modules/generated/sklearn_theano.feature_extraction.GoogLeNetClassifier.html" />
+
+  <script type="text/javascript">
+    $("div.buttonNext, div.buttonPrevious").hover(
+       function () {
+           $(this).css('background-color', '#FF9C34');
+       },
+       function () {
+           $(this).css('background-color', '#A7D6E2');
+       }
+    );
+    var bodywrapper = $('.bodywrapper');
+    var sidebarbutton = $('#sidebarbutton');
+    sidebarbutton.css({'height': '900px'});
+  </script>
+
+  </head>
+  <body role="document">
+
+<div class="header-wrapper">
+    <div class="header">
+        <p class="logo"><a href="../../index.html">
+            <img src="../../static/mini_sloth_bw.png" alt="Logo"/>
+        </a>
+        </p><div class="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../install.html">Installation</a></li>
+                <li class="btn-li"><div class="btn-group">
+		      <a href="../../documentation.html">Documentation</a>
+		      <a class="btn dropdown-toggle" data-toggle="dropdown">
+			     <span class="caret"></span>
+		      </a>
+		      <ul class="dropdown-menu">
+			<li class="link-title">sklearn-theano 0.1 (development)</li>
+			<li><a href="../../user_guide.html">User guide</a></li>
+			<li><a href="../classes.html">API</a></li>
+			<li class="divider"></li>
+		        <li><a href="http://sklearn-theano.github.io/dev/documentation.html">Development</a></li>
+		        <li><a href="../../documentation.html">More versions...</a></li>
+		      </ul>
+		    </div>
+		</li>
+            <li><a href="../../auto_examples/index.html">Examples</a></li>
+            </ul>
+
+            <div class="search_form">
+                <div id="cse" style="width: 100%;"></div>
+            </div>
+        </div> <!-- end navbar --></div>
+</div>
+
+
+<!-- Github "fork me" ribbon -->
+<a href="https://github.com/sklearn-theano/sklearn-theano">
+  <img class="fork-me"
+       style="position: absolute; top: 0; right: 0; border: 0;"
+       src="../../static/img/forkme.png"
+       alt="Fork me on GitHub" />
+</a>
+
+<div class="content-wrapper">
+    <div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper">
+      <p class="doc-version">This documentation is for sklearn-theano <strong>version 0.0.1</strong> &mdash; <a href="http://sklearn-theano.github.io/dev/support.html#documentation-resources">Other versions</a></p>
+    <p class="citing">If you are reading this, thanks for using <a href="../../about.html#sklearn-theano">sklearn-theano</a>.</p>
+    <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></code>.GoogLeNetClassifier</a><ul>
+<li><a class="reference internal" href="#examples-using-sklearn-theano-feature-extraction-googlenetclassifier">Examples using <code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.GoogLeNetClassifier</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+
+
+      <div class="content">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sklearn-theano-feature-extraction-googlenetclassifier">
+<h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><code class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></code></a>.GoogLeNetClassifier<a class="headerlink" href="#sklearn-theano-feature-extraction-googlenetclassifier" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier">
+<em class="property">class </em><code class="descclassname">sklearn_theano.feature_extraction.</code><code class="descname">GoogLeNetClassifier</code><span class="sig-paren">(</span><em>top_n=5</em>, <em>large_network=False</em>, <em>output_strings=True</em>, <em>transpose_order=(0</em>, <em>3</em>, <em>1</em>, <em>2)</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/caffe/googlenet.py#L164"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>A classifier for cropped images using the GoogLeNet neural network.</p>
+<p>Image will be cropped to center 224x224 pixels</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>top_n</strong> : integer, optional (default=5)</p>
+<blockquote>
+<div><p>How many classes to return, based on sorted class probabilities.</p>
+</div></blockquote>
+<p><strong>output_strings</strong> : boolean, optional (default=True)</p>
+<blockquote>
+<div><p>Whether to return class strings or integer classes. Returns class
+strings by default.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><p class="first"><strong>crop_bounds_</strong> : tuple, (x_left, x_right, y_lower, y_upper)</p>
+<blockquote class="last">
+<div><p>The coordinate boundaries of the cropping box used.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>top_n=5</em>, <em>large_network=False</em>, <em>output_strings=True</em>, <em>transpose_order=(0</em>, <em>3</em>, <em>1</em>, <em>2)</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/caffe/googlenet.py#L187"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/caffe/googlenet.py#L196"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Passthrough for scikit-learn pipeline compatibility.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier.get_params">
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>deep: boolean, optional</strong> :</p>
+<blockquote>
+<div><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>params</strong> : mapping of string to any</p>
+<blockquote class="last">
+<div><p>Parameter names mapped to their values.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/caffe/googlenet.py#L221"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Classify a set of cropped input images.</p>
+<p>Returns the top_n classes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_images, height, width, color]</p>
+<blockquote>
+<div><p>or
+shape = [height, width, color]</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>T</strong> : array-like, shape = [n_images, top_n]</p>
+<blockquote class="last">
+<div><p>Returns the top_n classes for each of the n_images in X.
+If output_strings is True, then the result will be string
+description of the class label.</p>
+<p>Otherwise, the returned values will be the integer class label.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier.predict_proba">
+<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/caffe/googlenet.py#L256"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prediction probability for a set of cropped input images.</p>
+<p>Returns the top_n probabilities.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_images, height, width, color]</p>
+<blockquote>
+<div><p>or
+shape = [height, width, color]</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>T</strong> : array-like, shape = [n_images, top_n]</p>
+<blockquote class="last">
+<div><p>Returns the top_n probabilities for each of the n_images in X.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sklearn_theano.feature_extraction.GoogLeNetClassifier.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.GoogLeNetClassifier.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The former have parameters of the form
+<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it&#8217;s possible to update each
+component of a nested object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>self</strong> :</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="examples-using-sklearn-theano-feature-extraction-googlenetclassifier">
+<h2>Examples using <code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.GoogLeNetClassifier</span></code><a class="headerlink" href="#examples-using-sklearn-theano-feature-extraction-googlenetclassifier" title="Permalink to this headline">¶</a></h2>
+<div class="thumbnailContainer">
+    <div class="docstringWrapper"><div class="figure" id="id1">
+<a class="reference external image-reference" href="./../../auto_examples/./plot_comparison.html"><img alt="../../images/plot_comparison1.png" src="../../images/plot_comparison1.png" /></a>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_comparison.html#example-plot-comparison-py"><em>Comparison of GoogLeNet and Overfeat Classifiers</em></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this example, an image is input to an OverfeatClassifier and a GoogLeNetClassifier, and the ...
+</p></div>
+</div><div class="clearer"></div></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2014 - 2016, sklearn-theano developers (BSD License).
+      <a href="../../sources/modules/generated/sklearn_theano.feature_extraction.GoogLeNetClassifier.txt" rel="nofollow">Show this page source</a>
+    </div>
+     <div class="rel rellarge">
+    
+    
+     </div>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      # Set google analytics
+# FIXME
+      _gaq.push(['_setAccount', '222']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript"> google.load('search', '1',
+        {language : 'en'}); google.setOnLoadCallback(function() {
+            var customSearchControl = new
+            #FIXME
+            google.search.CustomSearchControl('016639176250731907682:tjtqbvtvij0');
+            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            var options = new google.search.DrawOptions();
+            options.setAutoComplete(true);
+            customSearchControl.draw('cse', options); }, true);
+    </script>
+  </body>
+</html>

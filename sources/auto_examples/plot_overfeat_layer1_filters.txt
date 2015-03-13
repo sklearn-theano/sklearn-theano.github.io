@@ -35,6 +35,6 @@ are similar to other filters used in computer vision, such as Gabor filters.
 .. literalinclude:: plot_overfeat_layer1_filters.py
     :lines: 11-
 
-**Total running time of the example:**  0.35 seconds
-( 0 minutes  0.35 seconds)
+**Total running time of the example:**  0.40 seconds
+( 0 minutes  0.40 seconds)
     

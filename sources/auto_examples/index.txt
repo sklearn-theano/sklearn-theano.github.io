@@ -39,6 +39,35 @@ and intended uses of ``sklearn-theano``.
         <div class="docstringWrapper">
 
 
+.. figure:: ./images/thumb/plot_cifar_fully_connected_generator.png
+   :target: ./plot_cifar_fully_connected_generator.html
+
+   :ref:`example_plot_cifar_fully_connected_generator.py`
+
+
+.. raw:: html
+
+
+    <p>This demo of a CIFAR generator is based on the work of I. Goodfellow, J. Pouget-Abadie, M. Mirz...
+    </p></div>
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   ./plot_cifar_fully_connected_generator
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer">
+        <div class="docstringWrapper">
+
+
 .. figure:: ./images/thumb/plot_mnist_generator.png
    :target: ./plot_mnist_generator.html
 
@@ -145,6 +174,35 @@ and intended uses of ``sklearn-theano``.
    :hidden:
 
    ./plot_asirra_dataset
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer">
+        <div class="docstringWrapper">
+
+
+.. figure:: ./images/thumb/plot_comparison.png
+   :target: ./plot_comparison.html
+
+   :ref:`example_plot_comparison.py`
+
+
+.. raw:: html
+
+
+    <p>In this example, an image is input to an OverfeatClassifier and a GoogLeNetClassifier, and the ...
+    </p></div>
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   ./plot_comparison
 
 
 

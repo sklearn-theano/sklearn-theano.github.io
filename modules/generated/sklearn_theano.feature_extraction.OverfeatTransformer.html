@@ -35,9 +35,6 @@
     <link rel="shortcut icon" href="../../static/mini_sloth_bw.ico"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../../index.html" />
-    <link rel="up" title="Reference" href="../classes.html" />
-    <link rel="next" title="sklearn_theano.feature_extraction.OverfeatClassifier" href="sklearn_theano.feature_extraction.OverfeatClassifier.html" />
-    <link rel="prev" title="sklearn_theano.datasets.fetch_mnist_generated" href="sklearn_theano.datasets.fetch_mnist_generated.html" />
   
    
        <script type="text/javascript" src="../../static/sidebar.js"></script>
@@ -62,7 +59,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -109,63 +106,11 @@
 <div class="content-wrapper">
     <div class="sphinxsidebar">
     <div class="sphinxsidebarwrapper">
-        <div class="rel">
-    
-
-  <!-- rellinks[1:] is an ugly hack to avoid link to module
-  index -->
-        <div class="rellink">
-        <a href="sklearn_theano.datasets.fetch_mnist_generated.html"
-        accesskey="P">Previous
-        <br/>
-        <span class="smallrellink">
-        sklearn_theano.d...
-        </span>
-            <span class="hiddenrellink">
-            sklearn_theano.datasets.fetch_mnist_generated
-            </span>
-        </a>
-        </div>
-            <div class="spacer">
-            &nbsp;
-            </div>
-        <div class="rellink">
-        <a href="sklearn_theano.feature_extraction.OverfeatClassifier.html"
-        accesskey="N">Next
-        <br/>
-        <span class="smallrellink">
-        sklearn_theano.f...
-        </span>
-            <span class="hiddenrellink">
-            sklearn_theano.feature_extraction.OverfeatClassifier
-            </span>
-        </a>
-        </div>
-
-    <!-- Ad a link to the 'up' page -->
-        <div class="spacer">
-        &nbsp;
-        </div>
-        <div class="rellink">
-        <a href="../classes.html">
-        Up
-        <br/>
-        <span class="smallrellink">
-        Reference
-        </span>
-            <span class="hiddenrellink">
-            Reference
-            </span>
-            
-        </a>
-        </div>
-    </div>
-    
       <p class="doc-version">This documentation is for sklearn-theano <strong>version 0.0.1</strong> &mdash; <a href="http://sklearn-theano.github.io/dev/support.html#documentation-resources">Other versions</a></p>
     <p class="citing">If you are reading this, thanks for using <a href="../../about.html#sklearn-theano">sklearn-theano</a>.</p>
     <ul>
-<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></tt>.OverfeatTransformer</a><ul>
-<li><a class="reference internal" href="#examples-using-sklearn-theano-feature-extraction-overfeattransformer">Examples using <tt class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatTransformer</span></tt></a></li>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></code>.OverfeatTransformer</a><ul>
+<li><a class="reference internal" href="#examples-using-sklearn-theano-feature-extraction-overfeattransformer">Examples using <code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatTransformer</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -179,13 +124,13 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="sklearn-theano-feature-extraction-overfeattransformer">
-<h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><tt class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></tt></a>.OverfeatTransformer<a class="headerlink" href="#sklearn-theano-feature-extraction-overfeattransformer" title="Permalink to this headline">¶</a></h1>
+<h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><code class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></code></a>.OverfeatTransformer<a class="headerlink" href="#sklearn-theano-feature-extraction-overfeattransformer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer">
-<em class="property">class </em><tt class="descclassname">sklearn_theano.feature_extraction.</tt><tt class="descname">OverfeatTransformer</tt><big>(</big><em>large_network=False, output_layers=[-1], force_reshape=True, transpose_order=(0, 3, 1, 2)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L182"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn_theano.feature_extraction.</code><code class="descname">OverfeatTransformer</code><span class="sig-paren">(</span><em>large_network=False, output_layers=[-1], force_reshape=True, transpose_order=(0, 3, 1, 2), detailed_network=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L257"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer" title="Permalink to this definition">¶</a></dt>
 <dd><p>A transformer/feature extractor for images using the OverFeat neural network.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -202,10 +147,18 @@ windows of 221x221 pixels. Otherwise, these windows will be 231x231.</p>
 output with a single call to transform.</p>
 </div></blockquote>
 <p><strong>force_reshape</strong> : boolean, optional (default=True)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Whether or not to force the output to be two dimensional. If true,
 this class can be used as part of a scikit-learn pipeline.
 force_reshape currently only supports len(output_layers) == 1!</p>
+</div></blockquote>
+<p><strong>detailed_network</strong> : boolean, optional (default=True)</p>
+<blockquote class="last">
+<div><p>If set to True, layers will be indexed and counted as in the binary
+version provided by the authors of OverFeat. I.e. convolution, relu,
+zero-padding, max-pooling are all separate layers. If False specified
+then convolution and relu are one unit and zero-padding layers are
+omitted.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -218,37 +171,22 @@ force_reshape currently only supports len(output_layers) == 1!</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatTransformer.fit" title="sklearn_theano.feature_extraction.OverfeatTransformer.fit"><tt class="xref py py-obj docutils literal"><span class="pre">fit</span></tt></a>(X[,&nbsp;y])</td>
-<td>Passthrough for scikit-learn pipeline compatibility.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatTransformer.fit_transform" title="sklearn_theano.feature_extraction.OverfeatTransformer.fit_transform"><tt class="xref py py-obj docutils literal"><span class="pre">fit_transform</span></tt></a>(X[,&nbsp;y])</td>
-<td>Fit to data, then transform it.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatTransformer.get_params" title="sklearn_theano.feature_extraction.OverfeatTransformer.get_params"><tt class="xref py py-obj docutils literal"><span class="pre">get_params</span></tt></a>([deep])</td>
-<td>Get parameters for this estimator.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatTransformer.set_params" title="sklearn_theano.feature_extraction.OverfeatTransformer.set_params"><tt class="xref py py-obj docutils literal"><span class="pre">set_params</span></tt></a>(**params)</td>
-<td>Set the parameters of this estimator.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatTransformer.transform" title="sklearn_theano.feature_extraction.OverfeatTransformer.transform"><tt class="xref py py-obj docutils literal"><span class="pre">transform</span></tt></a>(X)</td>
-<td>Transform a set of images.</td>
-</tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>large_network=False, output_layers=[-1], force_reshape=True, transpose_order=(0, 3, 1, 2)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L202"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>large_network=False, output_layers=[-1], force_reshape=True, transpose_order=(0, 3, 1, 2), detailed_network=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L284"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer.fit">
-<tt class="descname">fit</tt><big>(</big><em>X</em>, <em>y=None</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L211"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L296"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Passthrough for scikit-learn pipeline compatibility.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer.fit_transform">
-<tt class="descname">fit_transform</tt><big>(</big><em>X</em>, <em>y=None</em>, <em>**fit_params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L406"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.fit_transform" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_transform</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**fit_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L409"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.fit_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit to data, then transform it.</p>
 <p>Fits transformer to X and y with optional parameters fit_params
 and returns a transformed version of X.</p>
@@ -278,7 +216,7 @@ and returns a transformed version of X.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer.get_params">
-<tt class="descname">get_params</tt><big>(</big><em>deep=True</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -303,11 +241,11 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer.set_params">
-<tt class="descname">set_params</tt><big>(</big><em>**params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form
-<tt class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></tt> so that it&#8217;s possible to update each
+<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it&#8217;s possible to update each
 component of a nested object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -321,7 +259,7 @@ component of a nested object.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatTransformer.transform">
-<tt class="descname">transform</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L215"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.transform" title="Permalink to this definition">¶</a></dt>
+<code class="descname">transform</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L300"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatTransformer.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transform a set of images.</p>
 <p>Returns the features from each layer.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -357,18 +295,18 @@ list of array-like, length output_layers,</p>
 </dd></dl>
 
 <div class="section" id="examples-using-sklearn-theano-feature-extraction-overfeattransformer">
-<h2>Examples using <tt class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatTransformer</span></tt><a class="headerlink" href="#examples-using-sklearn-theano-feature-extraction-overfeattransformer" title="Permalink to this headline">¶</a></h2>
+<h2>Examples using <code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatTransformer</span></code><a class="headerlink" href="#examples-using-sklearn-theano-feature-extraction-overfeattransformer" title="Permalink to this headline">¶</a></h2>
 <div class="thumbnailContainer">
-    <div class="docstringWrapper"><div class="figure">
+    <div class="docstringWrapper"><div class="figure" id="id1">
 <a class="reference external image-reference" href="./../../auto_examples/./plot_asirra_dataset.html"><img alt="../../images/plot_asirra_dataset1.png" src="../../images/plot_asirra_dataset1.png" /></a>
-<p class="caption"><a class="reference internal" href="../../auto_examples/plot_asirra_dataset.html#example-plot-asirra-dataset-py"><em>Asirra dataset classification using transformer</em></a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_asirra_dataset.html#example-plot-asirra-dataset-py"><em>Asirra dataset classification using transformer</em></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>This example shows a basic use of the OverfeatTransformer in a scikit-learn pipeline in order t...
 </p></div>
 </div><div class="thumbnailContainer">
-    <div class="docstringWrapper"><div class="figure">
+    <div class="docstringWrapper"><div class="figure" id="id2">
 <a class="reference external image-reference" href="./../../auto_examples/./plot_localization_tutorial.html"><img alt="../../images/plot_localization_tutorial1.png" src="../../images/plot_localization_tutorial1.png" /></a>
-<p class="caption"><a class="reference internal" href="../../auto_examples/plot_localization_tutorial.html#example-plot-localization-tutorial-py"><em>Localizing an object in a large image</em></a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_localization_tutorial.html#example-plot-localization-tutorial-py"><em>Localizing an object in a large image</em></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Convolutional neural networks can also be used to localize an object in a large image. This exa...
 </p></div>
@@ -387,16 +325,8 @@ list of array-like, length output_layers,</p>
         &copy; 2014 - 2016, sklearn-theano developers (BSD License).
       <a href="../../sources/modules/generated/sklearn_theano.feature_extraction.OverfeatTransformer.txt" rel="nofollow">Show this page source</a>
     </div>
-     <div class="rel">
+     <div class="rel rellarge">
     
-    <div class="buttonPrevious">
-      <a href="sklearn_theano.datasets.fetch_mnist_generated.html">Previous
-      </a>
-    </div>
-    <div class="buttonNext">
-      <a href="sklearn_theano.feature_extraction.OverfeatClassifier.html">Next
-      </a>
-    </div>
     
      </div>
 

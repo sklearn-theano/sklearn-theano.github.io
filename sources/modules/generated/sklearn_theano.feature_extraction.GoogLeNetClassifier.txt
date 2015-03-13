@@ -1,0 +1,16 @@
+:mod:`sklearn_theano.feature_extraction`.GoogLeNetClassifier
+===================================================================
+
+.. currentmodule:: sklearn_theano.feature_extraction
+
+.. autoclass:: GoogLeNetClassifier
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: sklearn_theano.feature_extraction.GoogLeNetClassifier.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

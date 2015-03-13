@@ -62,7 +62,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -162,6 +162,7 @@
     <ul>
 <li><a class="reference internal" href="#">1. Feature extraction utilities</a><ul>
 <li><a class="reference internal" href="#overfeat">1.1. Overfeat</a></li>
+<li><a class="reference internal" href="#googlenet">1.2. GoogLeNet</a></li>
 </ul>
 </li>
 </ul>
@@ -175,7 +176,7 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="feature-extraction-utilities">
 <span id="feature-extraction"></span><h1>1. Feature extraction utilities<a class="headerlink" href="#feature-extraction-utilities" title="Permalink to this headline">¶</a></h1>
@@ -198,15 +199,6 @@ transformation, classification, and localization.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../modules/generated/sklearn_theano.feature_extraction.OverfeatTransformer.html#sklearn_theano.feature_extraction.OverfeatTransformer" title="sklearn_theano.feature_extraction.OverfeatTransformer"><tt class="xref py py-obj docutils literal"><span class="pre">OverfeatTransformer</span></tt></a>([large_network,&nbsp;...])</td>
-<td>A transformer/feature extractor for images using the OverFeat neural network.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../modules/generated/sklearn_theano.feature_extraction.OverfeatClassifier.html#sklearn_theano.feature_extraction.OverfeatClassifier" title="sklearn_theano.feature_extraction.OverfeatClassifier"><tt class="xref py py-obj docutils literal"><span class="pre">OverfeatClassifier</span></tt></a>([top_n,&nbsp;large_network,&nbsp;...])</td>
-<td>A classifier for cropped images using the OverFeat neural network.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../modules/generated/sklearn_theano.feature_extraction.OverfeatLocalizer.html#sklearn_theano.feature_extraction.OverfeatLocalizer" title="sklearn_theano.feature_extraction.OverfeatLocalizer"><tt class="xref py py-obj docutils literal"><span class="pre">OverfeatLocalizer</span></tt></a>(match_strings[,&nbsp;top_n,&nbsp;...])</td>
-<td>A localizer for single images using the OverFeat neural network.</td>
-</tr>
 </tbody>
 </table>
 <a class="reference external image-reference" href="../auto_examples/plot_multiple_localization.html"><img alt="../images/plot_multiple_localization_0011.png" src="../images/plot_multiple_localization_0011.png" style="width: 240.0px; height: 180.0px;" /></a>
@@ -214,6 +206,30 @@ transformation, classification, and localization.</p>
 <p class="topic-title first">Examples:</p>
 <ul class="simple">
 <li><em class="xref std std-ref">plot_multiple_localization.py</em></li>
+</ul>
+</div>
+</div>
+<div class="section" id="googlenet">
+<h2>1.2. GoogLeNet<a class="headerlink" href="#googlenet" title="Permalink to this headline">¶</a></h2>
+<p>Another state of the art neural network from Google is known as GoogLeNet:</p>
+<ol class="upperalpha simple" start="3">
+<li>Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, A. Rabinovich. <em>Going Deeper with Convolutions</em>, arXiv:1409.4842, September 2014.</li>
+</ol>
+<p>Various layers of this neural network can be used for
+transformation and classification.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<a class="reference external image-reference" href="../auto_examples/plot_comparison.html"><img alt="../images/plot_comparison_0011.png" src="../images/plot_comparison_0011.png" style="width: 240.0px; height: 180.0px;" /></a>
+<div class="topic">
+<p class="topic-title first">Examples:</p>
+<ul class="simple">
+<li><em class="xref std std-ref">plot_comparison.py</em></li>
 </ul>
 </div>
 </div>

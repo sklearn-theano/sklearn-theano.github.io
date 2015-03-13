@@ -62,7 +62,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -176,7 +176,7 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="visualization-of-first-layer-filters">
 <span id="example-plot-overfeat-layer1-filters-py"></span><h1>Visualization of first layer filters<a class="headerlink" href="#visualization-of-first-layer-filters" title="Permalink to this headline">¶</a></h1>
@@ -189,7 +189,7 @@ are similar to other filters used in computer vision, such as Gabor filters.</p>
 <li><a class="first reference internal image-reference" href="../images/plot_overfeat_layer1_filters_002.png"><img alt="../images/plot_overfeat_layer1_filters_002.png" src="../images/plot_overfeat_layer1_filters_002.png" style="width: 376.0px; height: 282.0px;" /></a>
 </li>
 </ul>
-<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_overfeat_layer1_filters.py"><tt class="xref download docutils literal"><span class="pre">plot_overfeat_layer1_filters.py</span></tt></a></p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_overfeat_layer1_filters.py"><code class="xref download docutils literal"><span class="pre">plot_overfeat_layer1_filters.py</span></code></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -216,24 +216,25 @@ are similar to other filters used in computer vision, such as Gabor filters.</p>
 
 <span class="k">def</span> <span class="nf">plot_filters</span><span class="p">(</span><span class="n">layer_weights</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="n">mosaic</span> <span class="o">=</span> <span class="n">make_mosaic</span><span class="p">(</span><span class="n">layer_weights</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mosaic</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">&#39;nearest&#39;</span><span class="p">)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span></a><span class="p">(</span><span class="n">mosaic</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.gca"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span></a><span class="p">()</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="n">title</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">show</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 
 <span class="n">weights</span><span class="p">,</span> <span class="n">biases</span> <span class="o">=</span> <span class="n">fetch_overfeat_weights_and_biases</span><span class="p">(</span><span class="n">large_network</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">plot_filters</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">weights</span><span class="p">,</span> <span class="n">biases</span> <span class="o">=</span> <span class="n">fetch_overfeat_weights_and_biases</span><span class="p">(</span><span class="n">large_network</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
 <span class="n">plot_filters</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.35 seconds
-( 0 minutes  0.35 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.40 seconds
+( 0 minutes  0.40 seconds)</p>
 </div>
 
 

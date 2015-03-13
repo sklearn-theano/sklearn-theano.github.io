@@ -62,7 +62,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -176,7 +176,7 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="classification-and-top-n-prediction-probabilities">
 <span id="example-plot-classification-py"></span><h1>Classification and top N prediction probabilities<a class="headerlink" href="#classification-and-top-n-prediction-probabilities" title="Permalink to this headline">¶</a></h1>
@@ -187,11 +187,11 @@ box of size 231x231 is taken from the larger image to perform classification.</p
 <p>In general, the top N probability outputs represent the most likely potential
 classes for the OverfeatClassifier.</p>
 <img alt="../images/plot_classification_001.png" class="align-center" src="../images/plot_classification_001.png" />
-<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_classification.py"><tt class="xref download docutils literal"><span class="pre">plot_classification.py</span></tt></a></p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_classification.py"><code class="xref download docutils literal"><span class="pre">plot_classification.py</span></code></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Rectangle</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <a href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Rectangle"><span class="n">Rectangle</span></a>
 <span class="kn">from</span> <span class="nn">sklearn_theano.datasets</span> <span class="kn">import</span> <span class="n">load_sample_image</span>
 <span class="kn">from</span> <span class="nn">sklearn_theano.feature_extraction</span> <span class="kn">import</span> <span class="n">OverfeatClassifier</span>
 
@@ -204,26 +204,26 @@ classes for the OverfeatClassifier.</p>
 <span class="n">prediction_probs</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">crop_width</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">crop_height</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">crop_box</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span>
+<span class="n">crop_box</span> <span class="o">=</span> <a href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Rectangle"><span class="n">Rectangle</span></a><span class="p">((</span><span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">clf</span><span class="o">.</span><span class="n">crop_bounds_</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span>
                      <span class="n">fc</span><span class="o">=</span><span class="s">&#39;darkred&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s">&#39;darkred&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">35</span><span class="p">)</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axarr</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s">&quot;Top </span><span class="si">%i</span><span class="s"> classification and cropping box&quot;</span> <span class="o">%</span> <span class="n">top_n_classes</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.suptitle"><span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span></a><span class="p">(</span><span class="s">&quot;Top </span><span class="si">%i</span><span class="s"> classification and cropping box&quot;</span> <span class="o">%</span> <span class="n">top_n_classes</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">crop_box</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
-<span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">top_n_classes</span><span class="p">)</span>
+<span class="n">ind</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">top_n_classes</span><span class="p">)</span>
 <span class="n">width</span> <span class="o">=</span> <span class="o">.</span><span class="mi">45</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">prediction_probs</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;steelblue&#39;</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">ind</span> <span class="o">+</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s">&#39;vertical&#39;</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">&quot;Probability&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  20.29 seconds
-( 0 minutes  20.29 seconds)</p>
+<p><strong>Total running time of the example:</strong>  19.20 seconds
+( 0 minutes  19.20 seconds)</p>
 </div>
 
 

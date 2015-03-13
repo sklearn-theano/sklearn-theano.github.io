@@ -37,7 +37,7 @@
     <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../index.html" />
     <link rel="up" title="Examples" href="index.html" />
     <link rel="next" title="Drawing bounding boxes for localization" href="plot_single_localization.html" />
-    <link rel="prev" title="Examples" href="index.html" />
+    <link rel="prev" title="Generative networks for random CIFAR images" href="plot_cifar_fully_connected_generator.html" />
   
    
        <script type="text/javascript" src="../static/sidebar.js"></script>
@@ -62,7 +62,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -115,14 +115,14 @@
   <!-- rellinks[1:] is an ugly hack to avoid link to module
   index -->
         <div class="rellink">
-        <a href="index.html"
+        <a href="plot_cifar_fully_connected_generator.html"
         accesskey="P">Previous
         <br/>
         <span class="smallrellink">
-        Examples
+        Generative netwo...
         </span>
             <span class="hiddenrellink">
-            Examples
+            Generative networks for random CIFAR images
             </span>
         </a>
         </div>
@@ -176,7 +176,7 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="generative-networks-for-random-mnist-digits">
 <span id="example-plot-mnist-generator-py"></span><h1>Generative networks for random MNIST digits<a class="headerlink" href="#generative-networks-for-random-mnist-digits" title="Permalink to this headline">¶</a></h1>
@@ -197,7 +197,7 @@ Iteration 60
 Iteration 80
 </pre></div>
 </div>
-<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_mnist_generator.py"><tt class="xref download docutils literal"><span class="pre">plot_mnist_generator.py</span></tt></a></p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_mnist_generator.py"><code class="xref download docutils literal"><span class="pre">plot_mnist_generator.py</span></code></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;TkAgg&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -205,31 +205,31 @@ Iteration 80
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">sklearn_theano.datasets</span> <span class="kn">import</span> <span class="n">fetch_mnist_generated</span>
 
-<span class="n">X_tf</span> <span class="o">=</span> <span class="n">fetch_mnist_generated</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1999</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">fetch_mnist_generated</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1999</span><span class="p">)</span>
 
 <span class="c"># plotting based on</span>
 <span class="c"># http://stackoverflow.com/questions/4098131/matplotlib-update-a-plot</span>
-<span class="n">num_updates</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_tf</span><span class="p">)</span> <span class="o">//</span> <span class="mi">16</span>
-<span class="n">f</span><span class="p">,</span> <span class="n">axarr</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">objarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">axarr</span><span class="p">)</span>
+<span class="n">num_updates</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">//</span> <span class="mi">16</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">axarr</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">objarr</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.empty_like.html#numpy.empty_like"><span class="n">np</span><span class="o">.</span><span class="n">empty_like</span></a><span class="p">(</span><span class="n">axarr</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axarr</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
-    <span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X_tf</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s">&#39;gray&#39;</span><span class="p">)</span>
+    <span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">&#39;nearest&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_updates</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">X_tf</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">objarr</span><span class="o">.</span><span class="n">flat</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span><span class="p">])</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.draw"><span class="n">plt</span><span class="o">.</span><span class="n">draw</span></a><span class="p">()</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">08</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">&quot;Iteration </span><span class="si">%i</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  17.79 seconds
-( 0 minutes  17.79 seconds)</p>
+<p><strong>Total running time of the example:</strong>  19.75 seconds
+( 0 minutes  19.75 seconds)</p>
 </div>
 
 
@@ -247,7 +247,7 @@ Iteration 80
      <div class="rel">
     
     <div class="buttonPrevious">
-      <a href="index.html">Previous
+      <a href="plot_cifar_fully_connected_generator.html">Previous
       </a>
     </div>
     <div class="buttonNext">

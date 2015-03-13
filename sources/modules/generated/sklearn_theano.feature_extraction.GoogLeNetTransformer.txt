@@ -1,0 +1,16 @@
+:mod:`sklearn_theano.feature_extraction`.GoogLeNetTransformer
+====================================================================
+
+.. currentmodule:: sklearn_theano.feature_extraction
+
+.. autoclass:: GoogLeNetTransformer
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: sklearn_theano.feature_extraction.GoogLeNetTransformer.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

@@ -36,7 +36,7 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../index.html" />
     <link rel="up" title="Examples" href="index.html" />
-    <link rel="next" title="Localizing multiple objects in an image" href="plot_multiple_localization.html" />
+    <link rel="next" title="Comparison of GoogLeNet and Overfeat Classifiers" href="plot_comparison.html" />
     <link rel="prev" title="Classification and top N prediction probabilities" href="plot_classification.html" />
   
    
@@ -62,7 +62,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -130,14 +130,14 @@
             &nbsp;
             </div>
         <div class="rellink">
-        <a href="plot_multiple_localization.html"
+        <a href="plot_comparison.html"
         accesskey="N">Next
         <br/>
         <span class="smallrellink">
-        Localizing multi...
+        Comparison of Go...
         </span>
             <span class="hiddenrellink">
-            Localizing multiple objects in an image
+            Comparison of GoogLeNet and Overfeat Classifiers
             </span>
         </a>
         </div>
@@ -176,7 +176,7 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="asirra-dataset-classification-using-transformer">
 <span id="example-plot-asirra-dataset-py"></span><h1>Asirra dataset classification using transformer<a class="headerlink" href="#asirra-dataset-classification-using-transformer" title="Permalink to this headline">¶</a></h1>
@@ -188,7 +188,7 @@ sklearn-theano. Plots show one example of each class (cats and dogs).</p>
 <p><strong>Script output</strong>:</p>
 <div class="highlight-python"><div class="highlight"><pre>Total transform time
 ====================
-103.57567715644836
+104.102759123
 
              precision    recall  f1-score   support
 
@@ -203,13 +203,13 @@ Accuracy score
 0.875
 </pre></div>
 </div>
-<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_asirra_dataset.py"><tt class="xref download docutils literal"><span class="pre">plot_asirra_dataset.py</span></tt></a></p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_asirra_dataset.py"><code class="xref download docutils literal"><span class="pre">plot_asirra_dataset.py</span></code></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">sklearn_theano.datasets</span> <span class="kn">import</span> <span class="n">fetch_asirra</span>
 <span class="kn">from</span> <span class="nn">sklearn_theano.feature_extraction</span> <span class="kn">import</span> <span class="n">OverfeatTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn_theano.utils</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">accuracy_score</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -240,11 +240,11 @@ Accuracy score
 <span class="n">axarr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;off&#39;</span><span class="p">)</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">asirra</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="n">asirra</span><span class="o">.</span><span class="n">target</span> <span class="o">==</span> <span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">axarr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;off&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  175.25 seconds
-( 2 minutes  55.25 seconds)</p>
+<p><strong>Total running time of the example:</strong>  175.87 seconds
+( 2 minutes  55.87 seconds)</p>
 </div>
 
 
@@ -266,7 +266,7 @@ Accuracy score
       </a>
     </div>
     <div class="buttonNext">
-      <a href="plot_multiple_localization.html">Next
+      <a href="plot_comparison.html">Next
       </a>
     </div>
     

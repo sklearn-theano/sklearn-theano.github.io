@@ -1,0 +1,40 @@
+
+
+.. _example_plot_comparison.py:
+
+
+================================================
+Comparison of GoogLeNet and Overfeat Classifiers
+================================================
+
+In this example, an image is input to an OverfeatClassifier and a
+GoogLeNetClassifier, and the top N
+probability outputs are compared for both classifiers.
+
+
+
+
+.. image:: images/plot_comparison_001.png
+    :align: center
+
+
+**Script output**::
+
+  Overfeat predictions [['otter' 'meerkat, mierkat' 'Border terrier' 'badger'
+    'three-toed sloth, ai, Bradypus tridactylus']]
+  Overfeat probabilities [[  2.14521634e-07   1.34061577e-06   7.87416593e-06   1.31268520e-04
+      9.99858141e-01]]
+  GoogLeNet predictions [['otter' 'African grey, African gray, Psittacus erithacus' 'badger'
+    'sea lion' 'three-toed sloth, ai, Bradypus tridactylus']]
+  GoogLeNet probabilities [[ 0.0191793   0.02727892  0.03366567  0.04920716  0.76793528]]
+
+
+
+**Python source code:** :download:`plot_comparison.py <plot_comparison.py>`
+
+.. literalinclude:: plot_comparison.py
+    :lines: 11-
+
+**Total running time of the example:**  139.50 seconds
+( 2 minutes  19.50 seconds)
+    

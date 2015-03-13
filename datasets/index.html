@@ -61,7 +61,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -164,7 +164,7 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="dataset-loading-utilities">
 <span id="datasets"></span><h1>2. Dataset loading utilities<a class="headerlink" href="#dataset-loading-utilities" title="Permalink to this headline">¶</a></h1>
@@ -182,21 +182,15 @@ algorithms and pipelines for images and other multidimensional data.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../modules/generated/sklearn_theano.datasets.load_sample_images.html#sklearn_theano.datasets.load_sample_images" title="sklearn_theano.datasets.load_sample_images"><tt class="xref py py-obj docutils literal"><span class="pre">load_sample_images</span></tt></a>()</td>
-<td>Load sample images for image manipulation.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../modules/generated/sklearn_theano.datasets.load_sample_image.html#sklearn_theano.datasets.load_sample_image" title="sklearn_theano.datasets.load_sample_image"><tt class="xref py py-obj docutils literal"><span class="pre">load_sample_image</span></tt></a>(image_name)</td>
-<td>Load the numpy array of a single sample image</td>
-</tr>
 </tbody>
 </table>
 <a class="reference external image-reference" href="../auto_examples/plot_single_localization.html"><img alt="../images/plot_single_localization_0011.png" class="align-right" src="../images/plot_single_localization_0011.png" style="width: 240.0px; height: 180.0px;" /></a>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">The default coding of images is based on the <tt class="docutils literal"><span class="pre">uint8</span></tt> dtype to
+<p class="last">The default coding of images is based on the <code class="docutils literal"><span class="pre">uint8</span></code> dtype to
 spare memory.  Often machine learning algorithms work best if the
 input is converted to a floating point representation first.  Also,
-if you plan to use <tt class="docutils literal"><span class="pre">pylab.imshow</span></tt> don&#8217;t forget to scale to the range
+if you plan to use <code class="docutils literal"><span class="pre">pylab.imshow</span></code> don&#8217;t forget to scale to the range
 0 - 1 as done in the following example.</p>
 </div>
 <div class="topic">
@@ -217,9 +211,6 @@ can be used to build artificial datasets of controlled size.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../modules/generated/sklearn_theano.datasets.fetch_mnist_generated.html#sklearn_theano.datasets.fetch_mnist_generated" title="sklearn_theano.datasets.fetch_mnist_generated"><tt class="xref py py-obj docutils literal"><span class="pre">fetch_mnist_generated</span></tt></a>([n_samples,&nbsp;random_state])</td>
-<td>Generated MNIST digits based on the paper:</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -234,17 +225,6 @@ can be used for something closer to &#8220;real world&#8221; testing.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../modules/generated/sklearn_theano.datasets.fetch_asirra.html#sklearn_theano.datasets.fetch_asirra" title="sklearn_theano.datasets.fetch_asirra"><tt class="xref py py-obj docutils literal"><span class="pre">fetch_asirra</span></tt></a>([image_count])</td>
-<td><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
 </tbody>
 </table>
 </div>

@@ -37,7 +37,7 @@
     <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../index.html" />
     <link rel="up" title="Examples" href="index.html" />
     <link rel="next" title="Visualization of first layer filters" href="plot_overfeat_layer1_filters.html" />
-    <link rel="prev" title="Asirra dataset classification using transformer" href="plot_asirra_dataset.html" />
+    <link rel="prev" title="Comparison of GoogLeNet and Overfeat Classifiers" href="plot_comparison.html" />
   
    
        <script type="text/javascript" src="../static/sidebar.js"></script>
@@ -62,7 +62,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -115,14 +115,14 @@
   <!-- rellinks[1:] is an ugly hack to avoid link to module
   index -->
         <div class="rellink">
-        <a href="plot_asirra_dataset.html"
+        <a href="plot_comparison.html"
         accesskey="P">Previous
         <br/>
         <span class="smallrellink">
-        Asirra dataset c...
+        Comparison of Go...
         </span>
             <span class="hiddenrellink">
-            Asirra dataset classification using transformer
+            Comparison of GoogLeNet and Overfeat Classifiers
             </span>
         </a>
         </div>
@@ -176,11 +176,11 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="localizing-multiple-objects-in-an-image">
 <span id="example-plot-multiple-localization-py"></span><h1>Localizing multiple objects in an image<a class="headerlink" href="#localizing-multiple-objects-in-an-image" title="Permalink to this headline">¶</a></h1>
-<p>Extending on the <tt class="docutils literal"><span class="pre">plot_localization_tutorial</span></tt> example, there are more advanced
+<p>Extending on the <code class="docutils literal"><span class="pre">plot_localization_tutorial</span></code> example, there are more advanced
 ways to search for objects, and draw bounding boxes.</p>
 <p>Rather than using the full class label, we can also use the wordnet hierarchy to
 describe groups of labels which apply. In this case the high level labels
@@ -198,12 +198,12 @@ better estimate bounding boxes without the influence of outliers. In this case,
 one Gaussian will be placed to try and describe all of the matched points. Using
 a width and height bound of 3 standard deviations, it is possible to draw
 bounding boxes which are more robust to spurious points than the simple
-method used in <tt class="docutils literal"><span class="pre">plot_single_localization</span></tt>.</p>
+method used in <code class="docutils literal"><span class="pre">plot_single_localization</span></code>.</p>
 <img alt="../images/plot_multiple_localization_001.png" class="align-center" src="../images/plot_multiple_localization_001.png" />
-<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_multiple_localization.py"><tt class="xref download docutils literal"><span class="pre">plot_multiple_localization.py</span></tt></a></p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../downloads/plot_multiple_localization.py"><code class="xref download docutils literal"><span class="pre">plot_multiple_localization.py</span></code></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Rectangle</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <a href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Rectangle"><span class="n">Rectangle</span></a>
 <span class="kn">from</span> <span class="nn">sklearn_theano.datasets</span> <span class="kn">import</span> <span class="n">load_sample_image</span>
 <span class="kn">from</span> <span class="nn">sklearn_theano.feature_extraction</span> <span class="kn">import</span> <span class="n">OverfeatLocalizer</span>
 <span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GMM</span>
@@ -211,12 +211,12 @@ method used in <tt class="docutils literal"><span class="pre">plot_single_locali
 
 <span class="k">def</span> <span class="nf">convert_gmm_to_box</span><span class="p">(</span><span class="n">gmm</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
     <span class="n">midpoint</span> <span class="o">=</span> <span class="n">gmm</span><span class="o">.</span><span class="n">means_</span>
-    <span class="n">std</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">covars_</span><span class="p">)</span>
+    <span class="n">std</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sqrt.html#numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">covars_</span><span class="p">)</span>
     <span class="n">width</span> <span class="o">=</span> <span class="n">std</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
     <span class="n">height</span> <span class="o">=</span> <span class="n">std</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
     <span class="n">upper_left_point</span> <span class="o">=</span> <span class="p">(</span><span class="n">midpoint</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span>
                         <span class="n">midpoint</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">upper_left_point</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+    <span class="k">return</span> <a href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Rectangle"><span class="n">Rectangle</span></a><span class="p">(</span><span class="n">upper_left_point</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
                      <span class="n">fc</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">load_sample_image</span><span class="p">(</span><span class="s">&quot;cat_and_dog.jpg&quot;</span><span class="p">)</span>
@@ -229,7 +229,7 @@ method used in <tt class="docutils literal"><span class="pre">plot_single_locali
 <span class="n">cat_points</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.gca"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span></a><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">GMM</span><span class="p">()</span>
 <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dog_points</span><span class="p">)</span>
@@ -240,11 +240,11 @@ method used in <tt class="docutils literal"><span class="pre">plot_single_locali
 <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">cat_box</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  159.09 seconds
-( 2 minutes  39.09 seconds)</p>
+<p><strong>Total running time of the example:</strong>  174.84 seconds
+( 2 minutes  54.84 seconds)</p>
 </div>
 
 
@@ -262,7 +262,7 @@ method used in <tt class="docutils literal"><span class="pre">plot_single_locali
      <div class="rel">
     
     <div class="buttonPrevious">
-      <a href="plot_asirra_dataset.html">Previous
+      <a href="plot_comparison.html">Previous
       </a>
     </div>
     <div class="buttonNext">

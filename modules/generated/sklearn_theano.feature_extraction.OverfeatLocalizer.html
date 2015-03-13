@@ -35,9 +35,6 @@
     <link rel="shortcut icon" href="../../static/mini_sloth_bw.ico"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="top" title="sklearn-theano 0.0.1 documentation" href="../../index.html" />
-    <link rel="up" title="Reference" href="../classes.html" />
-    <link rel="next" title="Contributing" href="../../developers/index.html" />
-    <link rel="prev" title="sklearn_theano.feature_extraction.OverfeatClassifier" href="sklearn_theano.feature_extraction.OverfeatClassifier.html" />
   
    
        <script type="text/javascript" src="../../static/sidebar.js"></script>
@@ -62,7 +59,7 @@
   </script>
 
   </head>
-  <body>
+  <body role="document">
 
 <div class="header-wrapper">
     <div class="header">
@@ -109,63 +106,11 @@
 <div class="content-wrapper">
     <div class="sphinxsidebar">
     <div class="sphinxsidebarwrapper">
-        <div class="rel">
-    
-
-  <!-- rellinks[1:] is an ugly hack to avoid link to module
-  index -->
-        <div class="rellink">
-        <a href="sklearn_theano.feature_extraction.OverfeatClassifier.html"
-        accesskey="P">Previous
-        <br/>
-        <span class="smallrellink">
-        sklearn_theano.f...
-        </span>
-            <span class="hiddenrellink">
-            sklearn_theano.feature_extraction.OverfeatClassifier
-            </span>
-        </a>
-        </div>
-            <div class="spacer">
-            &nbsp;
-            </div>
-        <div class="rellink">
-        <a href="../../developers/index.html"
-        accesskey="N">Next
-        <br/>
-        <span class="smallrellink">
-        Contributing
-        </span>
-            <span class="hiddenrellink">
-            Contributing
-            </span>
-        </a>
-        </div>
-
-    <!-- Ad a link to the 'up' page -->
-        <div class="spacer">
-        &nbsp;
-        </div>
-        <div class="rellink">
-        <a href="../classes.html">
-        Up
-        <br/>
-        <span class="smallrellink">
-        Reference
-        </span>
-            <span class="hiddenrellink">
-            Reference
-            </span>
-            
-        </a>
-        </div>
-    </div>
-    
       <p class="doc-version">This documentation is for sklearn-theano <strong>version 0.0.1</strong> &mdash; <a href="http://sklearn-theano.github.io/dev/support.html#documentation-resources">Other versions</a></p>
     <p class="citing">If you are reading this, thanks for using <a href="../../about.html#sklearn-theano">sklearn-theano</a>.</p>
     <ul>
-<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></tt>.OverfeatLocalizer</a><ul>
-<li><a class="reference internal" href="#examples-using-sklearn-theano-feature-extraction-overfeatlocalizer">Examples using <tt class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatLocalizer</span></tt></a></li>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></code>.OverfeatLocalizer</a><ul>
+<li><a class="reference internal" href="#examples-using-sklearn-theano-feature-extraction-overfeatlocalizer">Examples using <code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatLocalizer</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -179,13 +124,13 @@
             
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="sklearn-theano-feature-extraction-overfeatlocalizer">
-<h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><tt class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></tt></a>.OverfeatLocalizer<a class="headerlink" href="#sklearn-theano-feature-extraction-overfeatlocalizer" title="Permalink to this headline">¶</a></h1>
+<h1><a class="reference internal" href="../classes.html#module-sklearn_theano.feature_extraction" title="sklearn_theano.feature_extraction"><code class="xref py py-mod docutils literal"><span class="pre">sklearn_theano.feature_extraction</span></code></a>.OverfeatLocalizer<a class="headerlink" href="#sklearn-theano-feature-extraction-overfeatlocalizer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer">
-<em class="property">class </em><tt class="descclassname">sklearn_theano.feature_extraction.</tt><tt class="descname">OverfeatLocalizer</tt><big>(</big><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L372"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn_theano.feature_extraction.</code><code class="descname">OverfeatLocalizer</code><span class="sig-paren">(</span><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L457"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>A localizer for single images using the OverFeat neural network.</p>
 <p>If large_network=True, this X will be cropped to the center
 221x221 pixels. Otherwise, this box will be 231x231.</p>
@@ -225,34 +170,22 @@ strings by default.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.fit" title="sklearn_theano.feature_extraction.OverfeatLocalizer.fit"><tt class="xref py py-obj docutils literal"><span class="pre">fit</span></tt></a>(X[,&nbsp;y])</td>
-<td>Passthrough for scikit-learn pipeline compatibility.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.get_params" title="sklearn_theano.feature_extraction.OverfeatLocalizer.get_params"><tt class="xref py py-obj docutils literal"><span class="pre">get_params</span></tt></a>([deep])</td>
-<td>Get parameters for this estimator.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.predict" title="sklearn_theano.feature_extraction.OverfeatLocalizer.predict"><tt class="xref py py-obj docutils literal"><span class="pre">predict</span></tt></a>(X)</td>
-<td>Localize an input image.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.set_params" title="sklearn_theano.feature_extraction.OverfeatLocalizer.set_params"><tt class="xref py py-obj docutils literal"><span class="pre">set_params</span></tt></a>(**params)</td>
-<td>Set the parameters of this estimator.</td>
-</tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L398"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>match_strings</em>, <em>top_n=5</em>, <em>large_network=False</em>, <em>transpose_order=(2</em>, <em>0</em>, <em>1)</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L483"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.fit">
-<tt class="descname">fit</tt><big>(</big><em>X</em>, <em>y=None</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L410"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L495"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Passthrough for scikit-learn pipeline compatibility.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.get_params">
-<tt class="descname">get_params</tt><big>(</big><em>deep=True</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -277,7 +210,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.predict">
-<tt class="descname">predict</tt><big>(</big><em>X</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/feature_extraction/overfeat.py#L414"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.predict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/feature_extraction/overfeat.py#L499"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Localize an input image.</p>
 <p>Returns the points where the top_n classes contains any of the
 match_strings.</p>
@@ -305,11 +238,11 @@ plt.scatter(T[i][:, 0], T[i][:, 1])</p>
 
 <dl class="method">
 <dt id="sklearn_theano.feature_extraction.OverfeatLocalizer.set_params">
-<tt class="descname">set_params</tt><big>(</big><em>**params</em><big>)</big><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/339a5e3/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/sklearn-theano/sklearn-theano/blob/c76b626/sklearn_theano/../../scikit-learn/sklearn/base.py#L226"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn_theano.feature_extraction.OverfeatLocalizer.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form
-<tt class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></tt> so that it&#8217;s possible to update each
+<code class="docutils literal"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it&#8217;s possible to update each
 component of a nested object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -324,25 +257,25 @@ component of a nested object.</p>
 </dd></dl>
 
 <div class="section" id="examples-using-sklearn-theano-feature-extraction-overfeatlocalizer">
-<h2>Examples using <tt class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatLocalizer</span></tt><a class="headerlink" href="#examples-using-sklearn-theano-feature-extraction-overfeatlocalizer" title="Permalink to this headline">¶</a></h2>
+<h2>Examples using <code class="docutils literal"><span class="pre">sklearn_theano.feature_extraction.OverfeatLocalizer</span></code><a class="headerlink" href="#examples-using-sklearn-theano-feature-extraction-overfeatlocalizer" title="Permalink to this headline">¶</a></h2>
 <div class="thumbnailContainer">
-    <div class="docstringWrapper"><div class="figure">
+    <div class="docstringWrapper"><div class="figure" id="id1">
 <a class="reference external image-reference" href="./../../auto_examples/./plot_single_localization.html"><img alt="../../images/plot_single_localization1.png" src="../../images/plot_single_localization1.png" /></a>
-<p class="caption"><a class="reference internal" href="../../auto_examples/plot_single_localization.html#example-plot-single-localization-py"><em>Drawing bounding boxes for localization</em></a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_single_localization.html#example-plot-single-localization-py"><em>Drawing bounding boxes for localization</em></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Drawing a bounding box on a detected object is crucial to properly finding objects in images. O...
 </p></div>
 </div><div class="thumbnailContainer">
-    <div class="docstringWrapper"><div class="figure">
+    <div class="docstringWrapper"><div class="figure" id="id2">
 <a class="reference external image-reference" href="./../../auto_examples/./plot_multiple_localization.html"><img alt="../../images/plot_multiple_localization1.png" src="../../images/plot_multiple_localization1.png" /></a>
-<p class="caption"><a class="reference internal" href="../../auto_examples/plot_multiple_localization.html#example-plot-multiple-localization-py"><em>Localizing multiple objects in an image</em></a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_multiple_localization.html#example-plot-multiple-localization-py"><em>Localizing multiple objects in an image</em></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Extending on the ``plot_localization_tutorial`` example, there are more advanced ways to search...
 </p></div>
 </div><div class="thumbnailContainer">
-    <div class="docstringWrapper"><div class="figure">
+    <div class="docstringWrapper"><div class="figure" id="id3">
 <a class="reference external image-reference" href="./../../auto_examples/./plot_localization_tutorial.html"><img alt="../../images/plot_localization_tutorial1.png" src="../../images/plot_localization_tutorial1.png" /></a>
-<p class="caption"><a class="reference internal" href="../../auto_examples/plot_localization_tutorial.html#example-plot-localization-tutorial-py"><em>Localizing an object in a large image</em></a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_localization_tutorial.html#example-plot-localization-tutorial-py"><em>Localizing an object in a large image</em></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Convolutional neural networks can also be used to localize an object in a large image. This exa...
 </p></div>
@@ -361,16 +294,8 @@ component of a nested object.</p>
         &copy; 2014 - 2016, sklearn-theano developers (BSD License).
       <a href="../../sources/modules/generated/sklearn_theano.feature_extraction.OverfeatLocalizer.txt" rel="nofollow">Show this page source</a>
     </div>
-     <div class="rel">
+     <div class="rel rellarge">
     
-    <div class="buttonPrevious">
-      <a href="sklearn_theano.feature_extraction.OverfeatClassifier.html">Previous
-      </a>
-    </div>
-    <div class="buttonNext">
-      <a href="../../developers/index.html">Next
-      </a>
-    </div>
     
      </div>
 

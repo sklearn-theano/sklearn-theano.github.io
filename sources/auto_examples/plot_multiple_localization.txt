@@ -44,6 +44,6 @@ method used in ``plot_single_localization``.
 .. literalinclude:: plot_multiple_localization.py
     :lines: 30-
 
-**Total running time of the example:**  159.09 seconds
-( 2 minutes  39.09 seconds)
+**Total running time of the example:**  174.84 seconds
+( 2 minutes  54.84 seconds)
     
